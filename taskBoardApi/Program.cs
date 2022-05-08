@@ -1,4 +1,5 @@
 using MongoDB.Driver;
+using taskBoardApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,7 @@ var databaseName = builder.Configuration["DatabaseSettings:DatabaseName"];
 builder.Services.AddScoped(c => new MongoClient(connectionString).GetDatabase(databaseName));
 
 //register services
-// builder.Services.AddScoped<IProduc>()
+builder.Services.AddScoped<ITodoService, TodoService>();
 
 var app = builder.Build();
 
