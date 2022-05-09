@@ -22,6 +22,19 @@ public class TodosController : Controller
       return await _todoService.GetTodoAsync(skip, count);
    }
 
+   [HttpGet]
+   public async Task<ActionResult<Todo>> GetTodoById(string id)
+   {
+      var todo = await _todoService.GetTodoById(id);
+
+      if (todo == null)
+      {
+         return NotFound();
+      }
+
+      return todo;
+   }
+
    [HttpPost]
    public async Task<ActionResult<Todo>> Create(Todo todo)
    {
@@ -29,5 +42,13 @@ public class TodosController : Controller
       await _todoService.CreateTodoAsync(newTodo);
 
       return newTodo;
+   }
+
+   [HttpPut]
+   public async Task<ActionResult<Todo>> Update(Todo update)
+   {
+      var todo = await _todoService.UpdateTodoAsync(update);
+
+      return CreatedAtRoute("GetTodoById", new { id = todo.Id });
    }
 }

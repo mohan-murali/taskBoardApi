@@ -821,25 +821,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mural\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\taskBoardApi\\taskBoardApi\\taskBoardApi.csproj",
+      "projectUniqueName": "D:\\taskBoardApi\\taskBoardApi\\taskBoardApi.csproj",
       "projectName": "taskBoardApi",
-      "projectPath": "C:\\Projects\\taskBoardApi\\taskBoardApi\\taskBoardApi.csproj",
-      "packagesPath": "C:\\Users\\mural\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\taskBoardApi\\taskBoardApi\\obj\\",
+      "projectPath": "D:\\taskBoardApi\\taskBoardApi\\taskBoardApi.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\taskBoardApi\\taskBoardApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mural\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/nuget": {}
       },
       "frameworks": {
         "net6.0": {
@@ -884,7 +891,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

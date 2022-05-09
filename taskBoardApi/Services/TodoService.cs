@@ -19,6 +19,11 @@ public class TodoService : ITodoService
         return result;
     }
 
+    public Task<Todo> GetTodoById(string id)
+    {
+        return _todo.Find(t => t.Id == id).FirstOrDefaultAsync();
+    }
+
     public Task CreateTodoAsync(Todo todo)
     {
         return _todo.InsertOneAsync(todo);

@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\taskBoardApi\\cosmons-mongowebapi\\APIForMongoDBQuickstart-WebAPI.csproj": {}
+    "D:\\taskBoardApi\\cosmons-mongowebapi\\APIForMongoDBQuickstart-WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\taskBoardApi\\cosmons-mongowebapi\\APIForMongoDBQuickstart-WebAPI.csproj": {
+    "D:\\taskBoardApi\\cosmons-mongowebapi\\APIForMongoDBQuickstart-WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\taskBoardApi\\cosmons-mongowebapi\\APIForMongoDBQuickstart-WebAPI.csproj",
+        "projectUniqueName": "D:\\taskBoardApi\\cosmons-mongowebapi\\APIForMongoDBQuickstart-WebAPI.csproj",
         "projectName": "APIForMongoDBQuickstart-WebAPI",
-        "projectPath": "C:\\Projects\\taskBoardApi\\cosmons-mongowebapi\\APIForMongoDBQuickstart-WebAPI.csproj",
-        "packagesPath": "C:\\Users\\mural\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\taskBoardApi\\cosmons-mongowebapi\\obj\\",
+        "projectPath": "D:\\taskBoardApi\\cosmons-mongowebapi\\APIForMongoDBQuickstart-WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\taskBoardApi\\cosmons-mongowebapi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mural\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
           "net6.0": {
@@ -65,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
