@@ -8,4 +8,5 @@ public interface ITodoService
     Task<Todo> GetTodoById(string id);
     Task CreateTodoAsync(Todo todo);
     Task<Todo> UpdateTodoAsync(Todo todo);
+    Task DeleteTodoAsync(string id);
 }

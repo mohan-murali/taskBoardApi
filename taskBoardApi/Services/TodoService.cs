@@ -12,27 +12,17 @@ public class TodoService : ITodoService
         _todo = db.GetCollection<Todo>(typeof(Todo).Name);
     }
 
-    public async Task<List<Todo>> GetTodoAsync(int skip, int count)
-    {
-        var result = await _todo.Find(todo => true).Skip(skip).Limit(count).ToListAsync();
+    public async Task<List<Todo>> GetTodoAsync(int skip, int count) =>
+        await _todo.Find(todo => true).Skip(skip).Limit(count).ToListAsync();
 
-        return result;
-    }
+    public Task<Todo> GetTodoById(string id) => _todo.Find(t => t.Id == id).FirstOrDefaultAsync();
 
-    public Task<Todo> GetTodoById(string id)
-    {
-        return _todo.Find(t => t.Id == id).FirstOrDefaultAsync();
-    }
+    public Task CreateTodoAsync(Todo todo) => _todo.InsertOneAsync(todo);
 
-    public Task CreateTodoAsync(Todo todo)
-    {
-        return _todo.InsertOneAsync(todo);
-    }
+    public Task<Todo> UpdateTodoAsync(Todo todo) => _todo.FindOneAndReplaceAsync(
+        Builders<Todo>.Filter.Eq(t => t.Id, todo.Id), todo,
+        new FindOneAndReplaceOptions<Todo>
+            { ReturnDocument = ReturnDocument.After });
 
-    public Task<Todo> UpdateTodoAsync(Todo todo)
-    {
-        return _todo.FindOneAndReplaceAsync(Builders<Todo>.Filter.Eq(t => t.Id, todo.Id), todo,
-            new FindOneAndReplaceOptions<Todo>
-                { ReturnDocument = ReturnDocument.After });
-    }
+    public Task DeleteTodoAsync(string id) => _todo.DeleteOneAsync(t => t.Id == id);
 }
