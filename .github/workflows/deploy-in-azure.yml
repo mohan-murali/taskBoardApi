@@ -38,28 +38,17 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: dev
 
     steps:
-      - uses: actions/checkout@v3
+      # Checkout the repo
+      - uses: actions/checkout@main
       
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v2
+      # Setup .NET Core SDK
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
       
-      - name: Set up dependency caching for faster builds
-        uses: actions/cache@v3
-        with:
-          path: ~/.nuget/packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
@@ -72,8 +61,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }} # Replace with your app name
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }} # Define secret variable in repository settings as per action documentation
           package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
-
-      - name: logout
-        run: |
-          az logout
