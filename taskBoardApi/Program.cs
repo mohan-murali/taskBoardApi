@@ -10,6 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors();
+
 //Add mongoDB connection settings
 var connectionString = builder.Configuration["DatabaseSettings:MongoConnectionString"];
 var databaseName = builder.Configuration["DatabaseSettings:DatabaseName"];
