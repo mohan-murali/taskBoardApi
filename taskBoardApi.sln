@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIForMongoDBQuickstart-WebAPI", "cosmons-mongowebapi\APIForMongoDBQuickstart-WebAPI.csproj", "{B8B016A1-7EA2-43B1-80B6-ADDAA6D6BE8E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskBoardApi", "taskBoardApi\taskBoardApi.csproj", "{67804D76-A577-42CD-9C7E-94E4AE4DD974}"
 EndProject
 Global
